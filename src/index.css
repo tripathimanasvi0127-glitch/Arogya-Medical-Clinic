@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-clinic-primary: #121212;
+  --color-clinic-accent: #A68D74;
+  --color-clinic-paper: #F9F7F5;
+  --color-clinic-ink: #121212;
+  --color-clinic-muted: #6B6B6B;
+}
+
+@layer base {
+  body {
+    @apply bg-clinic-paper text-clinic-ink font-sans antialiased selection:bg-clinic-accent selection:text-white;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .mask-oval {
+    clip-path: ellipse(45% 50% at 50% 50%);
+  }
+  
+  .clinical-shadow {
+    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.1), 0 18px 36px -18px rgba(0,0,0,0.15);
+  }
+}
