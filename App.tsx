@@ -440,7 +440,7 @@ const ContactPage = () => (
 
 export default function App() {
   return (
-    <Router basename="/Arogya-Medical-Clinic">
+    <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-clinic-paper">
         <Navbar />
